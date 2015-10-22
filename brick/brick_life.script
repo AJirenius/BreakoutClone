@@ -1,0 +1,21 @@
+go.property("life",1)
+
+local function set_sprite(self)
+	msg.post("#sprite","play_animation",{ id = hash("red_"..self.life) })
+end
+
+function init(self)
+	set_sprite(self)
+end
+
+function on_message(self, message_id, message, sender)
+    if message_id == hash("dec_life") then
+    	self.life = self.life - message.value or 1
+		if self.life < 1 then 
+			msg.post("/part","play",{ pos = go.get_position() })
+			go.delete()
+		else
+			set_sprite(self)
+		end    	
+    end
+end

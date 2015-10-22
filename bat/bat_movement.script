@@ -1,0 +1,23 @@
+local gop = require "utils.gop"
+local ACCELERATION = 50
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	gop = gop.get_properties()
+	gop.speed = 0
+end
+
+function update(self, dt)
+	gop.speed = gop.speed * 0.9
+	local pos = go.get_position()
+	pos.x = pos.x + gop.speed * dt
+	go.set_position(pos)
+end
+
+function on_input(self, action_id, action)
+    if action_id == hash("left") then
+    	gop.speed = gop.speed - ACCELERATION
+    elseif action_id == hash("right") then
+    	gop.speed = gop.speed + ACCELERATION
+    end
+end

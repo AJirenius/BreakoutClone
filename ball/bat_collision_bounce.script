@@ -1,0 +1,14 @@
+local gop = require "utils.gop"
+
+function init(self)
+	gop = gop.get_properties()
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("contact_point_response") and message.group == hash("bat") then
+		local extra_angle = (message.position.x - message.other_position.x)/40
+		local new_v = (gop.direction + message.normal*2)
+		new_v.x = new_v.x + extra_angle
+		gop.direction = vmath.normalize(new_v)	
+	end
+end

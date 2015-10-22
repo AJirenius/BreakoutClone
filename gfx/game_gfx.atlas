@@ -1,0 +1,15 @@
+images {
+  image: "/gfx/ball.png"
+}
+images {
+  image: "/gfx/bat1.png"
+}
+images {
+  image: "/gfx/spark_small_bronze.png"
+}
+images {
+  image: "/gfx/streakflare.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

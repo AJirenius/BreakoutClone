@@ -1,0 +1,13 @@
+local gop = require "utils.gop"
+
+function init(self)
+	gop = gop.get_properties()
+	gop.direction = vmath.normalize(vmath.vector3(0.1,1,0))
+    gop.speed = 400
+end
+
+function update(self, dt)
+    local pos = go.get_position()
+    pos = pos + (gop.direction * gop.speed * dt)
+    go.set_position(pos)
+end
