@@ -1,5 +1,17 @@
+go.property("alpha", 1)
+
+local function flash(self)
+	self.alpha = 5
+	go.animate("#", "alpha", go.PLAYBACK_ONCE_FORWARD, 1, go.EASING_INCUBIC, 0.2)
+end
+
+function update(self, dt)
+	go.set("#sprite", "tint" , vmath.vector4(self.alpha,self.alpha,self.alpha,self.alpha))
+end
+
 function on_message(self, message_id, message, sender)
     if message_id == hash("contact_point_response") then
+    	flash(self)
     	msg.post(".","dec_life", { value = 1 })
     end
 end

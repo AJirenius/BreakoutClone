@@ -1,8 +1,8 @@
 local level = require "level.level_1"
-local level_width = 9
-local level_height = 5
-local offset_x = 220
-local offset_y = 470
+local level_width = 18
+local level_height = 11
+local offset_x = 10
+local offset_y = 370
 
 
 function init(self)
