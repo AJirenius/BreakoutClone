@@ -1,0 +1,7 @@
+function on_message(self, message_id, message, sender)
+	if self.str == nil then self.str = "" end
+	if message_id == hash("log") then
+    	self.str = self.str..message.str
+    	gui.set_text(gui.get_node("text"),"")--self.str)
+	end
+end

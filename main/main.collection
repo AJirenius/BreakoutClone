@@ -20,6 +20,126 @@ instances {
   }
 }
 instances {
+  id: "ball1"
+  prototype: "/ball/ball.go"
+  position {
+    x: 572.6491
+    y: 366.80728
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "ball2"
+  prototype: "/ball/ball.go"
+  position {
+    x: 414.182
+    y: 389.44547
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "ball3"
+  prototype: "/ball/ball.go"
+  position {
+    x: 463.36148
+    y: 418.3286
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "ball4"
+  prototype: "/ball/ball.go"
+  position {
+    x: 525.8116
+    y: 415.98672
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "ball5"
+  prototype: "/ball/ball.go"
+  position {
+    x: 398.5695
+    y: 475.31433
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "ball6"
+  prototype: "/ball/ball.go"
+  position {
+    x: 452.4327
+    y: 341.82724
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
   id: "bat"
   prototype: "/bat/bat.go"
   position {

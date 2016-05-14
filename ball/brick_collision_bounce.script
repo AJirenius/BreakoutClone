@@ -1,11 +1,11 @@
 local gop = require "utils.gop"
 
 function init(self)
-	gop = gop.get_properties()
+	self.gop = gop.get_properties()
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("contact_point_response")  and message.group == hash("brick") then
-		gop.direction = vmath.normalize(gop.direction + message.normal*2)	
+		self.gop.direction = vmath.normalize(self.gop.direction + message.normal*2)	
 	end
 end
